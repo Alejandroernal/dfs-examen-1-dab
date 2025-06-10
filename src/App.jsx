@@ -12,7 +12,10 @@ Notas
 Se debe generar un commit por cada tarea realizada.
 Se debe cargar el repositorio de GitHub en la tarea del campus.
 
-Probando un nuevo comit que se me guardo todo mal
+Probando un nuevo comit que se me guardo todo mal.
+
+Aclaracion en el ultimo commit -> Commit que dice "Tarea 2 y 3 juntas. (Ambos botones echos de una)
+", es el punto 4, en el cual hice tres botones: boton para resetear todo, para resetear lo locales y visitantes.
 */}
 
 function App() {
