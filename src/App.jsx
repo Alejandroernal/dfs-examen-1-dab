@@ -14,11 +14,15 @@ Se debe cargar el repositorio de GitHub en la tarea del campus.*/}
 
 function App() {
   const [partidolocal, setPartidolocal] = useState({
-    golesLocal: 0
+    golesLocal: 0,
+    tarjetayellow:0,
+    tarjetared:0
   })
 
   const [partidovisitante, setPartidovisitante] = useState({
-    golesVisitante: 0
+    golesVisitante: 0,
+    tarjetayellow:0,
+    tarjetared:0
   })
 
   const onGol = (equipo) => {
@@ -29,10 +33,26 @@ function App() {
   }
 }
 
+const tarjetaAmarilla = (equipo) => {
+  if (equipo === 'local') {
+    setPartidolocal({ ...partidolocal, tarjetayellow: partidolocal.tarjetayellow + 1 })
+  } else if (equipo === 'visitante') {
+    setPartidovisitante({ ...partidovisitante, tarjetayellow: partidovisitante.tarjetayellow + 1 })
+  }
+}
+
+const tarjetaRoja = (equipo) => {
+  if (equipo === 'local') {
+    setPartidolocal({ ...partidolocal, tarjetared: partidolocal.tarjetared + 1 })
+  } else if (equipo === 'visitante') {
+    setPartidovisitante({ ...partidovisitante, tarjetared: partidovisitante.tarjetared + 1 })
+  }
+}
+
   return (
     <div className='container'>
       <h1>Partido</h1>
-      <Controles onGol={onGol} />
+      <Controles onGol={onGol} tarjetaAmarilla={tarjetaAmarilla} tarjetaRoja={tarjetaRoja} />
       <Display partidolocal={partidolocal} partidovisitante={partidovisitante} />
     </div>
   )
