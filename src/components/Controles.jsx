@@ -3,7 +3,7 @@ const Controles = ({ onGol }) => {
     <div className="controles">
       <div>
         <h3>Local</h3>
-        <button onClick={() => { onGol('local') }}>⚽ Gol</button>
+        <button onClick={() => {}}>⚽ Gol</button>
         <button>🟨 Amarilla</button>
         <button>🟥 Roja</button>
       </div>
@@ -11,7 +11,7 @@ const Controles = ({ onGol }) => {
         <h3>Visitante</h3>
         <button onClick={() => { onGol('visitante') }}>⚽ Gol</button>
         <button>🟨 Amarilla</button>
-        <button>🟥 Roja</button>        
+        <button onClick={()=> {}}>🟥 Roja</button>        
       </div>
     </div>
   )

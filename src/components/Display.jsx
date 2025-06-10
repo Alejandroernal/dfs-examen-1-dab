@@ -1,4 +1,4 @@
-const Display = ({ partido }) => {
+const Display = ({ partidolocal, partidovisitante }) => {
   return (
     <div className="display">    
       <table>
@@ -12,13 +12,13 @@ const Display = ({ partido }) => {
         <tbody>
           <tr>
             <th scope="row">⚽</th>
-            <td>{partido.golesLocal}</td>
-            <td>{partido.golesVisitante}</td>
+            <td>{partidolocal.golesLocal}</td>
+            <td>{partidovisitante.golesVisitante}</td>
           </tr>
           <tr>
             <th scope="row">🟨</th>
-            <td>0</td>
-            <td>0</td>
+            <td>{}</td>
+            <td>{}</td>
           </tr>
           <tr>
             <th scope="row">🟥</th>
