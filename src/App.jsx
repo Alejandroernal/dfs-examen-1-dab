@@ -10,7 +10,10 @@ Tarea 3: 🟥 Agregar la funcionalidad para contar las tarjetas rojas 🟥 (3 Pu
 Tarea 4: 🔄 Agregar un botón para reiniciar el estado del partido 🔄 (2 Puntos)
 Notas
 Se debe generar un commit por cada tarea realizada.
-Se debe cargar el repositorio de GitHub en la tarea del campus.*/}
+Se debe cargar el repositorio de GitHub en la tarea del campus.
+
+Probando un nuevo comit que se me guardo todo mal
+*/}
 
 function App() {
   const [partidolocal, setPartidolocal] = useState({
