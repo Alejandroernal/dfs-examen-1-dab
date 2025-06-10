@@ -1,4 +1,4 @@
-const Display = ({ partidolocal, partidovisitante }) => {
+const Display = ({ partidolocal, partidovisitante, resetearlocal, resetearvisitante }) => {
   return (
     <div className="display">    
       <table>
@@ -24,6 +24,11 @@ const Display = ({ partidolocal, partidovisitante }) => {
             <th scope="row">🟥</th>
             <td>{partidolocal.tarjetared}</td>
             <td>{partidovisitante.tarjetared}</td>
+          </tr>
+          <tr>
+            <th>Restart</th>
+            <td><button onClick={resetearlocal}>Local</button></td>
+            <td><button onClick={resetearvisitante}>Visitante</button></td>
           </tr>
         </tbody>
       </table>

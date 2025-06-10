@@ -49,11 +49,43 @@ const tarjetaRoja = (equipo) => {
   }
 }
 
+const resetear = () => {
+  setPartidolocal({
+    golesLocal: 0,
+    tarjetayellow: 0,
+    tarjetared: 0
+  });
+  setPartidovisitante({
+    golesVisitante: 0,
+    tarjetayellow: 0,
+    tarjetared: 0
+  });
+}
+//Reseteo todo el local, estan en la tabla el boton de su lado.
+const resetearLocal = () => {
+  setPartidolocal({
+    golesLocal: 0,
+    tarjetayellow: 0,
+    tarjetared: 0
+  })
+}
+
+//Reseteartodo el visitante, los botones estan creados en la tabla
+const resetearVisitante = () => {
+  setPartidovisitante({
+    golesVisitante: 0,
+    tarjetayellow: 0,
+    tarjetared: 0
+  })
+}
+
+//Y hay un boton, que resetea ambos tableros
+
   return (
     <div className='container'>
-      <h1>Partido</h1>
+      <h1>Partido - <button onClick={()=>resetear()}>Resetar Todo</button></h1>
       <Controles onGol={onGol} tarjetaAmarilla={tarjetaAmarilla} tarjetaRoja={tarjetaRoja} />
-      <Display partidolocal={partidolocal} partidovisitante={partidovisitante} />
+      <Display partidolocal={partidolocal} partidovisitante={partidovisitante} resetearlocal={resetearLocal} resetearvisitante={resetearVisitante} />
     </div>
   )
 }
